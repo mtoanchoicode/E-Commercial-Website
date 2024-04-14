@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Toan Truong">
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titan+One&display=swap" rel="stylesheet">
+    <!--Icon-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!--CSS-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--JS-->
+    <script defer src="js/order.js" type="text/javascript"></script>
+    <script defer src="js/localStorage.js" type="text/javascript"></script>
+    <!--Favicon-->
+    <link rel = "icon" type="image/x-icon" href="images/logo.svg">
+    <title>Order - Sweet Life Vietnam</title>
+</head>
+<body id="orderPage">
+    <!--Skip Link-->
+    <a href="#mainContent" class="skip-link">Skip to main content</a>
+    <!--Navigation Bar-->
+    <nav>
+        <div class="nav-NavigationBar">
+            <div class="nav-logo">
+                <a><img src="images/logo.png" alt="Sweet Life Logo"></a>
+            </div>
+            <div class="nav-Navigators">
+                <ul class="nav-NavigationLink">
+                    <li><a href="index.html" id="nav-homeLink" class="nav-Links">Home</a></li>
+                    <li><a href="registration.html" id="nav-registrationLink" class="nav-Links">Registration</a></li>
+                    <li><a href="order.html" id="nav-orderLink" class="nav-Links nav-NavActive">Order</a></li>
+                    <li><a href="features.html" id="nav-featureLink">Features</a></li>
+                </ul>
+            </div>
+            <div class="nav-search">
+                <p class="nav-WelcomeText">Welcome <span class="nav-WelcomeName"></span></p>
+                <span class="nav-searchIcon">
+                    <ion-icon name="cart-outline" id="nav-CartIcon"></ion-icon>
+                    <span class="nav-CartQuanityProduct">0</span>
+                    <ion-icon name="menu-outline" class="nav-menuButton"></ion-icon>
+                </span>
+            </div>
+        </div>
+    </nav>
+    <!--Cart System-->
+    <aside class="nav-Cart">
+        <h2>Your Cart</h2>
+        <div class="nav-CartContent">
+
+        </div> 
+        <!--Total-->
+        <div class="nav-CartTotal">
+            <div class="nav-CartTotalTitle">Total</div>
+            <div class="nav-CartTotalPrice">$0</div>
+        </div>
+        <!--Order Button-->
+        <a href="order.html" class="nav-CartOrderBtn">Update Order</a>  
+        <!--Cart Close-->   
+        <ion-icon name="close-outline" id="nav-CartClose"></ion-icon>
+    </aside>
+    <!--Main Form-->
+    <article class="order-FormDiv" id="mainContent" tabindex="-1">
+        <header class="order-HeaderPart">
+            <h1>Your Order</h1>
+        </header>
+        <div class="order-FormPart">
+            <form method="post" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php" class="order-formContainer" target="_blank">
+                <fieldset class="order-DeliveryOrPickUp order-FormGroupDiv">
+                    <legend class="visually-hidden">Delivery or Pick up</legend>
+                    <div class="order-DeliveryForm order-DeliveryOrPickUpBox colorChange">
+                        <input type="radio" name="Delivery" value="Delivery" id="order-delivery" checked>
+                        <label for="order-delivery">DELIVERY</label>
+                    </div>
+                    <div class="order-PickUpForm order-DeliveryOrPickUpBox">
+                        <input type="radio" name="Delivery" value="Pick Up" id="order-pickUp">
+                        <label for="order-pickUp">PICK UP</label>
+                    </div>
+                </fieldset>
+                <!--Delivery and Pickup-->
+                <div class="order-DeliveryAddressDiv order-FormGroupDiv order-DePiShow" id="LinkToThis">
+                    <h2>Delivery Address</h2>
+                    <fieldset class="order-TextField order-DeliveryAddress">
+                        <legend class="visually-hidden">Address</legend>
+                        <label for="order-DeliveryAddress">Address</label>
+                        <input type="text" name="Delivery address" id="order-DeliveryAddress" class="order-AllDeliveryInput">
+                    </fieldset>
+                    <div class="order-DeliveryAddressDetail">
+                        <fieldset class="order-TextField order-DeliveryDistrict">
+                            <legend class="visually-hidden">District</legend>
+                            <label for="order-DeliveryDistrict">District</label>
+                            <input type="text" name="Delivery district" id="order-DeliveryDistrict" class="order-AllDeliveryInput">
+                        </fieldset>
+                        <fieldset class="order-TextField order-DeliveryCity">
+                            <legend class="visually-hidden">City</legend>
+                            <label for="order-DeliveryCity">City</label>
+                            <input type="text" name="Delivery city" id="order-DeliveryCity" class="order-AllDeliveryInput">
+                        </fieldset>
+                        <fieldset class="order-TextField order-DeliveryPostcode">
+                            <legend class="visually-hidden">Postcode</legend>
+                            <label for="order-DeliveryPostcode">Postcode</label>
+                            <input type="text" name="Delivery posstcode" id="order-DeliveryPostcode" class="order-AllDeliveryInput order-DeliveryPostcodeCheck">
+                        </fieldset>
+                    </div>
+                    <div class="order-BillingAddressHeading">
+                        <h2>Billings Address</h2>
+                        <div class="order-BillingAddressFeature">
+                            <label for="order-BillingAddressFeature">Same with delivery address</label>
+                            <input type="checkbox" name="Same with delivery address" id="order-BillingAddressFeature">
+                        </div>
+                    </div>
+                    <div class="ordder-ShowingErrorDiv"></div>
+                    <fieldset class="order-TextField order-BillingAddress">
+                        <legend class="visually-hidden">Address</legend>
+                        <label for="order-BillingAddress">Address</label>
+                        <input type="text" name="Billing address" id="order-BillingAddress" class="order-AllDeliveryInput">
+                    </fieldset>
+                    <div class="order-DeliveryAddressBillingDetail">
+                        <fieldset class="order-TextField order-DeliveryBillingDistrict">
+                            <legend class="visually-hidden">District</legend>
+                            <label for="order-DeliveryBillingDistrict">District</label>
+                            <input type="text" name="Billing Delivery district" id="order-DeliveryBillingDistrict" class="order-AllDeliveryInput">
+                        </fieldset>
+                        <fieldset class="order-TextField order-DeliveryBillingCity">
+                            <legend class="visually-hidden">City</legend>
+                            <label for="order-DeliveryBillingCity">City</label>
+                            <input type="text" name="Billing Delivery city" id="order-DeliveryBillingCity" class="order-AllDeliveryInput">
+                        </fieldset>
+                        <fieldset class="order-TextField order-DeliveryBillingPostcode">
+                            <legend class="visually-hidden">Postcode</legend>
+                            <label for="order-DeliveryBillingPostcode">Postcode</label>
+                            <input type="text" name="Billing Delivery posstcode" id="order-DeliveryBillingPostcode" class="order-AllDeliveryInput order-DeliveryPostcodeCheck">
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="order-PickUpAddressDiv order-FormGroupDiv">
+                    <h2>Pick Up Place</h2>
+                    <fieldset class="order-SelectField order-PickUpAddress">
+                        <legend class="visually-hidden">Pick Up Address</legend>
+                        <label for="order-PickupAddress">Pick up address</label>
+                        <select name="Pick up address" id="order-PickupAddress" class="order-PickUpPlaceToCheck">
+                            <option value="None" selected>None</option>
+                            <option value="123 Cach Mang Thang 8, Ward 7, District 3, Ho Chi Minh city">123 Cach Mang Thang 8, Ward 7, District 3, Ho Chi Minh city</option>
+                            <option value="83 Dien Bien Phu, Ward 6, District 3, Ho Chi Minh city">83 Dien Bien Phu, Ward 6, District 3, Ho Chi Minh city</option>
+                            <option value="10/4 Ly Tu Trong, Ward 7, District 3, Ho Chi Minh city">10/4 Ly Tu Trong, Ward 7, District 3, Ho Chi Minh city</option>
+                        </select>
+                    </fieldset>
+                </div>
+                <!--Contact Information-->
+                <h2>Contact Info</h2>
+                <div class="order-FirstLastNameDiv order-FormGroupDiv">
+                    <fieldset class="order-TextField order-firstName">
+                        <legend class="visually-hidden">First name</legend>
+                        <label for="order-firstName">First name</label>
+                        <input type="text" name="First name" id="order-firstName" class="order-AllContactInfoToCheck">
+                    </fieldset>
+                    <fieldset class="order-TextField order-lastName">
+                        <legend class="visually-hidden">Last name</legend>
+                        <label for="order-lastName">Last name</label>
+                        <input type="text" name="Last name" id="order-lastName" class="order-AllContactInfoToCheck">
+                    </fieldset>
+                </div>
+                <div class="order-MailPhoneDiv order-FormGroupDiv">
+                    <fieldset class="order-TextField order-Mail">
+                        <legend class="visually-hidden">E-mail</legend>
+                        <label for="order-Mail">E-mail</label>
+                        <input type="text" name="E-mail" id="order-Mail" class="order-AllContactInfoToCheck">
+                    </fieldset>
+                    <fieldset class="order-TextField order-Phone">
+                        <legend class="visually-hidden">Phone number</legend>
+                        <label for="order-Phone">Phone number</label>
+                        <input type="text" name="Phone Number" id="order-Phone" class="order-AllContactInfoToCheck">
+                    </fieldset>
+                </div>
+                <fieldset class="order-OnlineOrCOD order-FormGroupDiv"  id="order-OnlinePaymentDiv">
+                    <legend class="visually-hidden">Payment Method</legend>
+                    <h2>Payment Method</h2>
+                    <div class="order-CODForm order-OnlineOrCODBox colorChange">
+                        <input type="radio" name="Payment" value="COD" id="order-CODForm" checked>
+                        <label for="order-CODForm">Cash On Delivery</label>
+                    </div>
+                    <div class="order-OnlineForm order-OnlineOrCODBox">
+                        <input type="radio" name="Payment" value="Online Payment" id="order-OnlineForm">
+                        <label for="order-OnlineForm">Online Payment</label>
+                    </div>
+                </fieldset>
+                <!--Online Payment-->
+                <div class="order-OnlinePaymentDiv">
+                    <h3>Online Payment</h3>
+                    <fieldset class="order-OnlineCards order-FormGroupDiv">
+                        <legend class="visually-hidden">Type of card</legend>
+                        <div class="order-Visa order-OnlineCard">
+                            <input type="radio" name="PaymentCard" value="Visa" id="order-Visa">
+                            <label for="order-Visa"><img src="images/order/order-VisaLogo.png" alt="Visa Logo"></label>
+                        </div>
+                        <div class="order-MasterCard order-OnlineCard">
+                            <input type="radio" name="PaymentCard" value="Master Card" id="order-MasterCard">
+                            <label for="order-MasterCard"><img src="images/order/order-MaterCardLogo.png" alt="Mastercard Logo"></label>
+                        </div>
+                        <div class="order-AmericanExpress order-OnlineCard">
+                            <input type="radio" name="PaymentCard" value="American Express" id="order-AmericanExpress">
+                            <label for="order-AmericanExpress"><img src="images/order/order-AmericanExpresLogo.png" alt="American express Logo"></label>
+                        </div>
+                    </fieldset>
+                    <div class="order-ErrorInChoosingCard">
+                        
+                    </div>
+                    <div class="order-CardNameDiv order-FormGroupDiv">
+                        <fieldset class="order-TextField order-CardName">
+                            <legend class="visually-hidden">Name on card</legend>
+                            <label for="order-CardName">Name On Card</label>
+                            <input type="text" name="Name on Card" id="order-CardName" class="order-AllOnlinePaymentInput">
+                        </fieldset>
+                    </div>
+                    <div class="order-CardNumberDiv order-FormGroupDiv">
+                        <fieldset class="order-TextField order-CreditCardNumber">
+                            <legend class="visually-hidden">Credit card number</legend>
+                            <label for="order-CreditCardNumber">Credit Card Number</label>
+                            <input type="text" name="Credit card number" id="order-CreditCardNumber" class="order-AllOnlinePaymentInput">
+                        </fieldset>
+                        <fieldset class="order-TextField order-CVV">
+                            <legend class="visually-hidden">CVV</legend>
+                            <label for="order-CVV">CVV</label>
+                            <input type="text" name="CVV" id="order-CVV" class="order-AllOnlinePaymentInput">
+                        </fieldset>
+                    </div>
+                    <div class="order-CardExpiryDiv order-FormGroupDiv">
+                        <fieldset class="order-TextField order-ExpiryMonth">
+                            <legend class="visually-hidden">Exp Month</legend>
+                            <label for="order-ExpiryMonth">Exp Month</label>
+                            <input type="text" name="Expiry month" id="order-ExpiryMonth" class="order-AllOnlinePaymentInput" placeholder="(e.g., 01)">
+                        </fieldset>
+                        <fieldset class="order-TextField order-ExpiryYear">
+                            <legend class="visually-hidden">Exp Year</legend>
+                            <label for="order-ExpiryYear">Exp Year</label>
+                            <input type="text" name="Exp year" id="order-ExpiryYear" class="order-AllOnlinePaymentInput" placeholder="(e.g., 2010)">
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="order-SubmitButton order-FormGroupDiv">
+                    <input type="submit" value="Order now" class="order-OrderBtn">
+                </div>
+            </form>
+            <!--Total-->
+            <div class="order-sideBarTotalDiv">
+                <div class="order-TotalBoxDiv">
+                    <h2>Price</h2>
+                    <div class="order-quanityDiv order-TotalBox">
+                        <p>Quanity</p>
+                        <div class="order-quanityNumber">0</div>
+                    </div>
+                    <div class="order-priceDiv order-TotalBox">
+                        <p>Price</p>
+                        <div class="order-priceNumber">$0</div>
+                    </div>
+                    <div class="order-shippingDiv order-TotalBox">
+                        <p>Shipping</p>
+                        <div class="order-shippingNumber">$0</div>
+                    </div>
+                    <hr>
+                    <div class="order-TotalDiv order-TotalBox">
+                        <p>Total</p>
+                        <div class="order-totalNumber">$0</div>
+                    </div>
+                </div>
+                <div class="order-showShoppingCart">
+                    <ion-icon name="alert-circle-outline"></ion-icon>
+                    <h2><span class="order-showWord">Show</span> shopping cart detail</h2>
+                    <ion-icon name="chevron-down-outline" class="order-IconResponsive"></ion-icon>
+                </div>
+                <div class="order-ShoppingCartDiv">
+
+                </div>
+            </div>
+        </div>
+    </article>
+    <!--Warning If Empty Cart-->
+    <aside class="order-WarningDiv">
+        <div class="order-WarningPopUpWindow">
+            <img src="images/order/order-emptyCardIMG.png" alt="empty cart">
+            <h1 class="order-WarningHeading"><strong>Your shopping cart is empty</strong></h1>
+            <h2 class="order-WarningContent">Go back and grab some food to access the order page</h2>
+            <a href="index.html#mainContent">Back to home page</a>
+        </div>
+    </aside>
+
+    <!--Footer-->
+    <footer>
+        <div class="footer-MainContent">
+            <div class="footer-socialMedia">
+                <a href="https://www.youtube.com/channel/UCKtcNQkXsW1QzeNw3fwgLmg" target="_blank"><ion-icon name="logo-youtube"></ion-icon><p class="visually-hidden">Youtube Link</p></a>
+                <a target="_blank" href="https://www.instagram.com/min_toan/"><ion-icon name="logo-instagram"></ion-icon><p class="visually-hidden">instagram Link</p></a>
+                <a target="_blank" href="https://www.amazon.com/Sweet-Life-Cape-Cod-Creamery/dp/0800739477/ref=sr_1_2?crid=25ZJZOVZY1FBP&dib=eyJ2IjoiMSJ9.wJW7pJaBxsV03Cx3oWImlUnRobHqu0kH--MdCASnbkkWrZpmVwGMZQQ-cu-N0Uh0iuhRpoj3Fbr7hIe0WhCjtX83JypEUUT5rMifHtlTgVsw3A86lsdQWR-NuQZ6gtQrFquV3xtPcCy0UTen2kXKdYeG8froy0kGNoDK6KoE1wKQv16j9fBfIbIN2sBOKYUthgZ0c-Vv0UHm0TEPoEj81XkN4QYbwSiC4njgm5TBOks.wp8v5WZtTqoQoLMk9LR7O4MocvU39wJGuR0G2npQmE0&dib_tag=se&keywords=Sweet+Life&qid=1711550100&sprefix=sweet+lif%2Caps%2C385&sr=8-2"><ion-icon name="logo-amazon"></ion-icon><p class="visually-hidden">Amazon link</p></a>
+                <a target="_blank" href="https://www.reddit.com/r/FrankOcean/comments/17dju8b/sweet_life_is_perhaps_my_favorite_song_of_all_time/"><ion-icon name="logo-reddit"></ion-icon><p class="visually-hidden">reddit link</p></a>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">HOME</a>
+                <a href="registration.html">REGISTRATION</a>
+                <a href="order.html">ORDER</a>
+                <a href="features.html">FEATURE</a>
+            </div>
+        </div>
+        <hr>
+        <p class="footer-Copyright"><em>The website serves as Assignment 2 for the Web Development Unit within Swinburne University's Computer Science program.</em></p>
+    </footer>
+</body>
+</html>

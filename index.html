@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Toan Truong">
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titan+One&display=swap" rel="stylesheet">
+    <!--Icon-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!--CSS-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--JS-->
+    <script defer src="js/home.js" type="text/javascript"></script>
+    <script defer src="js/localStorage.js" type="text/javascript"></script>
+    <!--Favicon-->
+    <link rel = "icon" type="image/x-icon" href="images/logo.svg">
+    <title>Home - Sweet Life Vietnam</title>
+</head>
+<body id="homePage">
+    <!--Skip Link-->
+    <a href="#mainContent" class="skip-link">Skip to main content</a>
+    <nav>
+        <div class="nav-NavigationBar">
+            <div class="nav-logo">
+                <a href="index.html"><img src="images/logo.png" alt="Sweet Life Logo"></a>
+            </div>
+            <div class="nav-Navigators">
+                <ul class="nav-NavigationLink">
+                    <li><a id="nav-homeLink" class="nav-NavActive">Home</a></li>
+                    <li><a href="registration.html" id="nav-registrationLink">Registration</a></li>
+                    <li><a href="order.html" id="nav-orderLink">Order</a></li>
+                    <li><a href="features.html" id="nav-featureLink">Features</a></li>
+                </ul>
+            </div>
+            <div class="nav-search">
+                <p class="nav-WelcomeText">Welcome <span class="nav-WelcomeName"></span></p>
+                <span class="nav-searchIcon">
+                    <ion-icon name="cart-outline" id="nav-CartIcon"></ion-icon>
+                    <span class="nav-CartQuanityProduct">0</span>
+                    <ion-icon name="menu-outline" class="nav-menuButton"></ion-icon>
+                </span>
+            </div>
+        </div>
+    </nav>
+    <!--Cart System-->
+    <aside class="nav-Cart">
+        <h2>Your Cart</h2>
+        <div class="nav-CartContent">
+
+        </div> 
+        <!--Total-->
+        <div class="nav-CartTotal">
+            <div class="nav-CartTotalTitle">Total</div>
+            <div class="nav-CartTotalPrice">$0</div>
+        </div>
+        <!--Order Button-->
+        <a href="order.html" class="nav-CartOrderBtn">Order Now</a>  
+        <!--Cart Close-->   
+        <ion-icon name="close-outline" id="nav-CartClose"></ion-icon>
+    </aside>
+    <!--Landing Page-->
+    <header class="home-LandingPageDiv">
+        <div class="home-LandingPageList">
+            <div class="home-LandingPage" id="LinkToThis">
+                <div class="home-LandingPageTextBox">
+                    <h3 class="home-LandingPageCampaign">CAMPAIGN</h3>
+                    <h1>Choose <span class="home-LandingPageColor">Color</span><br><span>Choose</span> Flavour</h1>
+                    <div class="home-LandingPageSwitch">
+                        <div class="home-SwitchStrawberry home-SwitchDiv">
+                            <div class="home-SwitchDot"></div>
+                            <h2>Strawberry</h2>
+                        </div>
+                        <div class="home-SwitchMatcha home-SwitchDiv">
+                            <div class="home-SwitchDot"></div>
+                            <h2>Matcha</h2>
+                        </div>
+                        <div class="home-SwitchVanilla home-SwitchDiv">
+                            <div class="home-SwitchDot"></div>
+                            <h2>Vanilla</h2>
+                        </div>
+                        <div class="home-SwitchChoco home-SwitchDiv">
+                            <div class="home-SwitchDot"></div>
+                            <h2>Choco</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="home-LandingPageIMGBox">
+                    <img src="images/home/home-vanillaIC.png" alt="feature ice cream of Sweet Life" class="home-LandingPageIceCream">
+                </div>
+                <div class="home-LandingPageCircle"></div>
+            </div>
+            <div class="home-LandingPage">
+                <div class="home-LandingPageIMGBox2">
+                    <img src="images/home/home-poster.png" alt="poster of Sweet Life" class="home-LandingPageIceCream">
+                </div>
+                <div class="home-LandingPageTextBox2">
+                    <h1>It's not ice-cream<br>It's <span>Sweet Life</span></h1>
+                    <p>Since 2005, Sweet Life has been a delectable haven, crafting frozen delights that transcend time. With flavors inspired by nostalgia and innovation, our ice cream store invites you to savor the sweetness of life.</p>
+                </div>
+            </div>
+            <div class="home-LandingPage home-LandingPage3">
+                <div class="home-LandingPage3Logos">
+                    <img src="images/logo.png" alt="Sweet Life logo">
+                    <div class="home-LandingPage3Line"></div>
+                    <img src="images/home/home-collabLogo.png" alt="Baskin Robins logo">
+                </div>
+                <h2>Coming Soon ...</h2>
+            </div>
+        </div>
+        <div class="home-LandingPageButtons">
+            <a id="home-LandingPagePrev"><ion-icon name="chevron-back-outline"></ion-icon><span class="visually-hidden">Previous Slide</span></a>
+            <a id="home-LandingPageNext"><ion-icon name="chevron-forward-outline"></ion-icon><span class="visually-hidden">Next Slide</span></a>
+        </div>
+        <ul class="home-LandingPageDots">
+            <li class="home-LandingPageDotActive"> </li>
+            <li></li>
+            <li></li>
+        </ul>
+    </header>
+    <!--Ice-Cream Flavour showroom-->
+    <article class="home-FlavourOfIC">
+        <section class="home-HeadingCategories">
+            <h2>Explore Our Best<br>Flavour</h2>
+            <p>Indulge in Sweet Life's irresistible signature flavor, a delectable concoction meticulously.<br>Crafted with premium ingredients to deliver an unparalleled taste sensation that will leave you craving for more.</p>
+        </section>
+        <section class="home-FlavourContainer">
+            <div class="home-FlavourCardSliderWrapper slider-wrapper">
+                    <div class="home-prevButton home-navigationCardButton slidebutton" id="prev-slide"> 
+                        <ion-icon name="chevron-back-outline"></ion-icon>
+                    </div>
+                    <div class="home-FlavourCardSliderList image-list">
+                        <div class="home-CardArticle">
+                                <img src="images/home/home-blueberryScoop.png" alt="a scoop of bluberry ice cream" class="home-cardIMG">
+                                <h3>Blueberry</h3>
+                        </div>
+
+                        <div class="home-CardArticle">
+                                <img src="images/home/home-cherryScoop.png" alt="a scoop of Cherry ice cream" class="home-cardIMG">
+                                <h3>Cherry</h3>
+                        </div>
+                                                
+                        <div class="home-CardArticle">
+                                <img src="images/home/home-chocolateScoop.png" alt="a scoop of Chocolate ice cream" class="home-cardIMG">
+                                <h3>Chocolate</h3>
+                        </div>
+                                                
+                        <div class="home-CardArticle">
+                                <img src="images/home/home-cookieScoop.png" alt="a scoop of Cookie ice cream" class="home-cardIMG">
+                                <h3>Cookie</h3>
+                        </div>
+                                                
+                        <div class="home-CardArticle">
+                                <img src="images/home/home-hazelnutScoop.png" alt="a scoop of Hazelnut ice cream" class="home-cardIMG">
+                                <h3>Hazelnut</h3>
+                        </div>
+                                                
+                        <div class="home-CardArticle">
+                                <img src="images/home/home-honeyScoop.png" alt="a scoop of Honey ice cream" class="home-cardIMG">
+                                <h3>Honey</h3>
+                        </div>
+                                                
+                        <div class="home-CardArticle">
+                                <img src="images/home/home-mangoScoop.png" alt="a scoop of Mango ice cream" class="home-cardIMG">
+                                <h3>Mango</h3>
+                        </div>
+                                                
+                        <div class="home-CardArticle">
+                                <img src="images/home/home-mintScoop.png" alt="a scoop of Mint ice cream" class="home-cardIMG">
+                                <h3>Mint</h3>
+                        </div>
+                                                
+                        <div class="home-CardArticle">
+                                <img src="images/home/home-pitaschioScoop.png" alt="a scoop of Pitaschio ice cream" class="home-cardIMG">
+                                <h3>Pitaschio</h3>
+                        </div>
+                                                
+                        <div class="home-CardArticle">
+                                <img src="images/home/home-strawberryScoop.png" alt="a scoop of Strawberry ice cream" class="home-cardIMG">
+                                <h3>Strawberry</h3>
+                        </div>
+                    </div>
+                <div class="home-nextButton home-navigationCardButton slidebutton" id="next-slide">
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                </div>
+            </div>
+
+        </section>
+    </article>
+    <!--Signature Menu -->
+    <article class="home-featuredIceCream"  id="mainContent" tabindex="-1">
+        <section class="home-featuredIceCreamHeading">
+            <h2>Signature Menu</h2>
+        </section>
+        <section>
+            <div class="home-SignatureICContainer">
+                <div class="home-SignatureIC home-IceCreamBoxJS">
+                    <div class="home-SignatureICImage">
+                        <img class="home-SignatureICIMG home-IceCreamBoxImageJS" src="images/home/home-AmericanSunday.png" alt="American Sunday Ice-cream">
+                    </div>
+                    <h3 class="home-productTitle home-IceCreamBoxTitleJS">AMERICAN SUNDAY</h3>
+                    <h4 class = "home-productPrice home-IceCreamBoxPriceJS">$10</h4>
+                    <div class="home-AddToCartButton home-IceCreamBoxButtonJS">
+                        <h5><ion-icon name="cart-outline"></ion-icon> Add To Cart</h5>
+                    </div>
+                </div>
+                <div class="home-SignatureIC home-IceCreamBoxJS">
+                    <div class="home-SignatureICImage">
+                        <img class="home-SignatureICIMG home-IceCreamBoxImageJS" src="images/home/home-Ice-creamCone.png" alt="Ice-cream Cone">
+                    </div>
+                    <h3 class="home-productTitle home-IceCreamBoxTitleJS">SWELIFE CONE</h3>
+                    <h4 class = "home-productPrice home-IceCreamBoxPriceJS">$2</h4>
+                    <div class="home-AddToCartButton home-IceCreamBoxButtonJS">
+                        <h5> <ion-icon name="cart-outline"></ion-icon> Add To Cart</h5>
+                    </div>
+                </div>
+                <div class="home-SignatureIC home-IceCreamBoxJS">
+                    <div class="home-SignatureICImage">
+                        <img class="home-SignatureICIMG home-IceCreamBoxImageJS" src="images/home/home-FiveDolphin.png" alt="Five Dolphin Ice-cream">
+                    </div>
+                    <h3 class="home-productTitle home-IceCreamBoxTitleJS">FIVE DOLPHIN</h3>
+                    <h4 class = "home-productPrice home-IceCreamBoxPriceJS">$20</h4>
+                    <div class="home-AddToCartButton home-IceCreamBoxButtonJS">
+                        <h5> <ion-icon name="cart-outline"></ion-icon> Add To Cart</h5>
+                    </div>
+                </div>
+                <div class="home-SignatureIC home-IceCreamBoxJS">
+                    <div class="home-SignatureICImage">
+                        <img class="home-SignatureICIMG home-IceCreamBoxImageJS" src="images/home/home-NightEverest.png" alt="Night Everest Ice-cream">
+                    </div>
+                    <h3 class="home-productTitle home-IceCreamBoxTitleJS">NIGHT EVEREST</h3>
+                    <h4 class = "home-productPrice home-IceCreamBoxPriceJS">$7</h4>
+                    <div class="home-AddToCartButton home-IceCreamBoxButtonJS">
+                        <h5> <ion-icon name="cart-outline"></ion-icon> Add To Cart</h5>
+                    </div>
+                </div>
+                <div class="home-SignatureIC home-IceCreamBoxJS">
+                    <div class="home-SignatureICImage">
+                        <img class="home-SignatureICIMG home-IceCreamBoxImageJS" src="images/home/home-NotOrange.png" alt="home-NotOrange Ice-cream">
+                    </div>
+                    <h3 class="home-productTitle home-IceCreamBoxTitleJS">NOT ORANGE</h3>
+                    <h4 class = "home-productPrice home-IceCreamBoxPriceJS">$10</h4>
+                    <div class="home-AddToCartButton home-IceCreamBoxButtonJS">
+                        <h5> <ion-icon name="cart-outline"></ion-icon> Add To Cart</h5>
+                    </div>
+                </div>
+                <div class="home-SignatureIC home-IceCreamBoxJS">
+                    <div class="home-SignatureICImage">
+                        <img class="home-SignatureICIMG home-IceCreamBoxImageJS" src="images/home/home-ThreeCircleTwoStick.png" alt="Three Circle Two Stick Ice-cream">
+                    </div>
+                    <h3 class="home-productTitle home-IceCreamBoxTitleJS">THREE CIRCLE TWO STICK</h3>
+                    <h4 class = "home-productPrice home-IceCreamBoxPriceJS">$12</h4>
+                    <div class="home-AddToCartButton home-IceCreamBoxButtonJS">
+                        <h5> <ion-icon name="cart-outline"></ion-icon> Add To Cart</h5>
+                    </div>
+                </div>
+                <div class="home-SignatureIC home-IceCreamBoxJS">
+                    <div class="home-SignatureICImage">
+                        <img class="home-SignatureICIMG home-IceCreamBoxImageJS" src="images/home/home-WhiteAndBlack.png" alt="White and Black Ice-cream">
+                    </div>
+                    <h3 class="home-productTitle home-IceCreamBoxTitleJS">WHITE AND BLACK</h3>
+                    <h4 class = "home-productPrice home-IceCreamBoxPriceJS">$9</h4>
+                    <div class="home-AddToCartButton home-IceCreamBoxButtonJS">
+                        <h5> <ion-icon name="cart-outline"></ion-icon> Add To Cart</h5>
+                    </div>
+                </div>
+                <div class="home-SignatureIC home-IceCreamBoxJS">
+                    <div class="home-SignatureICImage">
+                        <img class="home-SignatureICIMG home-IceCreamBoxImageJS" src="images/home/home-YourSweet.png" alt="Your Sweet Ice-cream">
+                    </div>
+                    <h3 class="home-productTitle home-IceCreamBoxTitleJS">YOUR SWEET</h3>
+                    <h4 class = "home-productPrice home-IceCreamBoxPriceJS">$10</h4>
+                    <div class="home-AddToCartButton home-IceCreamBoxButtonJS">
+                        <h5> <ion-icon name="cart-outline"></ion-icon> Add To Cart</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
+    <!--Best Seller Menu-->
+    <article class="home-BestSellerDiv">
+        <section class="home-BestSellerHeading">
+            <h2>Best Seller Menu</h2>
+        </section>
+        <section>
+            <div class="home-BestSellerContainer">
+                <div class="home-BestSellerMainIC home-IceCreamBoxJS">
+                    <div class="home-BestSellerContentMainDiv">
+                        <h3 class="home-IceCreamBoxTitleJS">SWEET BOXS</h3>
+                        <h4 class="home-IceCreamBoxPriceJS home-BestSellerMainPrice">$7</h4>
+                        <h4>Life's Sweet Surprises, Inside Every Box!</h4>
+                    </div>
+                    <div class="home-BestSellerAddToCartMainBTN home-IceCreamBoxButtonJS">
+                        <h5 class="home-BestSellerAddToCartText">Add To Cart</h5>
+                    </div>
+                    <img class="home-IceCreamBoxImageJS home-BestSellerICMainImage" src="images/home/home-NewSweetBox.png" alt="Ice-cream cups">
+                </div>
+                <div class="home-BestSellerIC home-IceCreamBoxJS">
+                    <div class="home-BestSellerImageDiv">
+                        <img class="home-IceCreamBoxImageJS home-BestSellerICImage" src="images/home/home-BananaBoat.png" alt="Banana Boat Ice-cream">
+                    </div>
+                    <div class="home-BestSellerContentDiv">
+                        <h3 class="home-IceCreamBoxTitleJS">BANANA BOAT</h3>
+                        <h4 class="home-IceCreamBoxPriceJS">$17</h4>
+                        <div class="home-BestSellerAddToCartBTN home-IceCreamBoxButtonJS">
+                            <h5> <ion-icon name="cart-outline"></ion-icon> Add To Cart</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="home-BestSellerIC home-IceCreamBoxJS">
+                    <div class="home-BestSellerImageDiv">
+                        <img class="home-IceCreamBoxImageJS home-BestSellerICImage" src="images/home/home-GoldenBoy.png" alt="Golden Boy Ice-cream">
+                    </div>
+                    <div class="home-BestSellerContentDiv">
+                        <h3 class="home-IceCreamBoxTitleJS">GOLDEN BOY</h3>
+                        <h4 class="home-IceCreamBoxPriceJS">$25</h4>
+                        <div class="home-BestSellerAddToCartBTN home-IceCreamBoxButtonJS">
+                            <h5> <ion-icon name="cart-outline"></ion-icon> Add To Cart</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="home-BestSellerIC home-IceCreamBoxJS">
+                    <div class="home-BestSellerImageDiv">
+                        <img class="home-IceCreamBoxImageJS home-BestSellerICImage" src="images/home/home-Strawaffle.png" alt="Ice-cream with wraffle cake">
+                    </div>
+                    <div class="home-BestSellerContentDiv">
+                        <h3 class="home-IceCreamBoxTitleJS">STRAWAFFLE</h3>
+                        <h4 class="home-IceCreamBoxPriceJS">$7</h4>
+                        <div class="home-BestSellerAddToCartBTN home-IceCreamBoxButtonJS">
+                            <h5> <ion-icon name="cart-outline"></ion-icon> Add To Cart</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
+    <!--Sale OFf-->
+    <article class="home-SaleOffDiv">
+        <div class="home-SaleOffContainer">
+            <figure class="home-SaleOffBanner">
+                <img src="images/home/home-SaleOffBanner1.png" alt="2 ice-cream held by 2 people" class="home-SaleOffBannerIMG">
+                <img src="images/home/home-SaleOffBanner2.png" alt="a person with an ice-cream" class="home-SaleOffBannerIMG">
+            </figure>
+            <div class="home-SaleOffContent">
+                <h3 class="home-SaleOffSubtitle"><span class="home-SaleOffSpan">Special Offer</span><span class="home-SaleOffBadge">-50%</span></h3>
+                <h2>SWELIFE CONE</h2>
+                <p class="home-SaleOffText">Hurry! Last chance to savor the deliciousness of Swelife Cone. Half off!</p>
+                <div ><div class="home-SaleOffCountDown">00 : 00 : 00 : 00</div></div>
+                <a href="registration.html" class="home-SaleOffRegisterNow">Register Now To Get The Offer</a>
+            </div>
+        </div>
+    </article>
+    <!--FeedBack-->
+    <article class="home-FeedBackDiv">
+        <h2>Feedbacks of Our Customer</h2>
+        <div class="home-FeddBackCustomerContainer">
+            <div class="home-FeedBackCustomer">
+                <h3 class="home-FeedBaclQuotes">"</h3>
+                <div class="home-FeedBackStar">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half"></ion-icon>
+                </div>
+                <p>Sweet Life's ice cream is divine, with flavors that burst and service that's always welcoming.</p>
+                <div class="home-FeedBackProfile">
+                    <img src="images/home/home-Customer1.JPG" alt="Customer's avatar: a boy with his camera">
+                    <h3>Toan Truong</h3>
+                </div>
+            </div>
+
+
+            <div class="home-FeedBackCustomer">
+                <h3 class="home-FeedBaclQuotes">"</h3>
+                <div class="home-FeedBackStar">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half"></ion-icon>
+                </div>
+                <p>Indulging in Sweet Life's creamy treats is like a taste of paradise in every scoop!</p>
+                <div class="home-FeedBackProfile">
+                    <img src="images/home/home-Customer2.jpg" alt="Customer avatar: a girl">
+                    <h3>Anh Nguyen</h3>
+                </div>
+            </div>
+
+
+            <div class="home-FeedBackCustomer">
+                <h3 class="home-FeedBaclQuotes">"</h3>
+                <div class="home-FeedBackStar">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half"></ion-icon>
+                </div>
+                <p>Sweet Life delivers happiness in a cone—delicious flavors and friendly staff make it exceptional!</p>
+                <div class="home-FeedBackProfile">
+                    <img src="images/home/home-Customer3.jpg" alt="Customer avatar: a boy fell asleep">
+                    <h3>Trung Nguyen</h3>
+                </div>
+            </div>
+        </div>
+        
+    </article>
+    <!--Contact-->
+    <article class="home-ContactDiv">
+        <h2>Contact Us</h2>
+        <div class="home-ContactInformation">
+            <img src="images/home/home-map.png" alt="map for the location of Sweet Life store">
+            <div class="home-contactContainer">
+                <div class="home-contactPhone home-contactBlock">
+                    <h3>Phone</h3>
+                    <a href="tel:0888309209">+84 888 309 029</a><br>
+                    <a href="tel:0836220610">+84 836 220 610</a>
+                </div>
+                <div class="home-contactAddress home-contactBlock">
+                    <h3>Address</h3>
+                    <p>123 Cach Mang Thang 8, Ward 7, District 3, Ho Chi Minh city</p>
+                    <p>83 Dien Bien Phu, Ward 6, District 3, Ho Chi Minh city</p>
+                    <p>10/4 Ly Tu Trong, Ward 7, District 3, Ho Chi Minh city</p>
+                </div>
+                <div class="home-contactMail home-contactBlock">
+                    <h3>E-mail</h3>
+                    <a href="mailto:truongleminh.toan4c@gmail.com">truongleminh.toan4c@gmail.com</a><br>
+                    <a href="mailto:104995838@student.swin.edu.au">104995838@student.swin.edu.au</a>
+                </div>
+            </div>
+        </div>
+    </article>
+    <!--Footer-->
+    <footer>
+        <div class="footer-MainContent">
+            <div class="footer-socialMedia">
+                <a href="https://www.youtube.com/channel/UCKtcNQkXsW1QzeNw3fwgLmg" target="_blank"><ion-icon name="logo-youtube"></ion-icon><p class="visually-hidden">Youtube Link</p></a>
+                <a target="_blank" href="https://www.instagram.com/min_toan/"><ion-icon name="logo-instagram"></ion-icon><p class="visually-hidden">instagram Link</p></a>
+                <a target="_blank" href="https://www.amazon.com/Sweet-Life-Cape-Cod-Creamery/dp/0800739477/ref=sr_1_2?crid=25ZJZOVZY1FBP&dib=eyJ2IjoiMSJ9.wJW7pJaBxsV03Cx3oWImlUnRobHqu0kH--MdCASnbkkWrZpmVwGMZQQ-cu-N0Uh0iuhRpoj3Fbr7hIe0WhCjtX83JypEUUT5rMifHtlTgVsw3A86lsdQWR-NuQZ6gtQrFquV3xtPcCy0UTen2kXKdYeG8froy0kGNoDK6KoE1wKQv16j9fBfIbIN2sBOKYUthgZ0c-Vv0UHm0TEPoEj81XkN4QYbwSiC4njgm5TBOks.wp8v5WZtTqoQoLMk9LR7O4MocvU39wJGuR0G2npQmE0&dib_tag=se&keywords=Sweet+Life&qid=1711550100&sprefix=sweet+lif%2Caps%2C385&sr=8-2"><ion-icon name="logo-amazon"></ion-icon><p class="visually-hidden">Amazon link</p></a>
+                <a target="_blank" href="https://www.reddit.com/r/FrankOcean/comments/17dju8b/sweet_life_is_perhaps_my_favorite_song_of_all_time/"><ion-icon name="logo-reddit"></ion-icon><p class="visually-hidden">reddit link</p></a>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">HOME</a>
+                <a href="registration.html">REGISTRATION</a>
+                <a href="order.html">ORDER</a>
+                <a href="features.html">FEATURE</a>
+            </div>
+        </div>
+        <hr>
+        <p class="footer-Copyright"><em>The website serves as Assignment 2 for the Web Development Unit within Swinburne University's Computer Science program.</em></p>
+    </footer>
+</body>
+</html>

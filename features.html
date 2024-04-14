@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Toan Truong">
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titan+One&display=swap" rel="stylesheet">
+    <!--Icon-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!--CSS-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--JS-->
+    <script defer src="js/feature.js" type="text/javascript"></script>
+    <script defer src="js/localStorage.js" type="text/javascript"></script>
+    <!--Favicon-->
+    <link rel = "icon" type="image/x-icon" href="images/logo.svg">
+    <title>Feature-Sweet Life Vietnam</title>
+</head>
+<body id="featurePage">
+    <!--Skip Link-->
+    <a href="#mainContent" class="skip-link">Skip to main content</a>
+    <!--Navigation bar-->
+    <nav id="LinkToThis">
+        <div class="nav-NavigationBar">
+            <div class="nav-logo">
+                <a><img src="images/logo.png" alt="Sweet Life Logo"></a>
+            </div>
+            <div class="nav-Navigators">
+                <ul class="nav-NavigationLink">
+                    <li><a href="index.html" id="nav-homeLink">Home</a></li>
+                    <li><a href="registration.html" id="nav-registrationLink">Registration</a></li>
+                    <li><a href="order.html" id="nav-orderLink">Order</a></li>
+                    <li><a href="features.html" id="nav-featureLink" class="nav-NavActive">Features</a></li>
+                </ul>
+            </div>
+            <div class="nav-search">
+                <p class="nav-WelcomeText">Welcome <span class="nav-WelcomeName"></span></p>
+                <span class="nav-searchIcon">
+                    <ion-icon name="cart-outline" id="nav-CartIcon"></ion-icon>
+                    <span class="nav-CartQuanityProduct">0</span>
+                    <ion-icon name="menu-outline" class="nav-menuButton"></ion-icon>
+                </span>
+            </div>
+        </div>
+    </nav>
+    <!--Cart System-->
+    <aside class="nav-Cart">
+        <h2>Your Cart</h2>
+        <div class="nav-CartContent">
+
+        </div> 
+        <!--Total-->
+        <div class="nav-CartTotal">
+            <div class="nav-CartTotalTitle">Total</div>
+            <div class="nav-CartTotalPrice">$0</div>
+        </div>
+        <!--Order Button-->
+        <a href="order.html" class="nav-CartOrderBtn">Order Now</a>  
+        <!--Cart Close-->   
+        <ion-icon name="close-outline" id="nav-CartClose"></ion-icon>
+    </aside>
+    <!--Features-->
+    <article class="feat-FeaturesDiv" id="mainContent" tabindex="-1">
+        <div class="feat-Heading">
+            <h1>Features</h1>
+        </div>
+        <div class="feat-FeaturesContainer">
+            <div class="feat-MenuDiv feat-featureDiv">
+                <h2>Feature 1</h2>
+                <h3>Automatically Recognized Menu Bar</h3>
+                <p>The navigation bar will dynamically highlight the current webpage name, distinguishing it from others. Through JavaScript, hovering over other page names triggers highlighting, and returning to the initial state upon hover exit.</p>
+                <a href="features.html#LinkToThis" class="feat-LinkToFeatureButton" target="_blank">Link to feature</a>
+            </div>
+            <div class="feat-CreditDiv feat-featureDiv">
+                <h2>Feature 2</h2>
+                <h3>Credit Card Validation</h3>
+                <p>Based on the type of credit card being chosen, the validate for each credit card number will be change. Limation of 15 digits is for American Express and 16 digits for VISA and Mastercard</p>
+                <a href="order.html#order-OnlinePaymentDiv" class="feat-LinkToFeatureButton" target="_blank">Link to feature</a>
+            </div>
+            <div class="feat-AddressDiv feat-featureDiv">
+                <h2>Feature 3</h2>
+                <h3>Same Address Button</h3>
+                <p>
+                    Clicking the "Same Address" button will automatically populate the billing address with the delivery address if filled. Otherwise, it prompts an alert for missing delivery information, ensuring seamless order processing and customer satisfaction.</p>
+                <a href="order.html#LinkToThis" class="feat-LinkToFeatureButton" target="_blank">Link to feature</a>
+            </div>
+            <div class="feat-ColorDiv feat-featureDiv">
+                <h2>Feature 4</h2>
+                <h3>Cart System</h3>
+                <p>By leveraging JavaScript, my website empowers personalized shopping carts for customers. Utilizing localStorage, this shopping cart can be transfered to the order page to make order for it.</p>
+                <a href="index.html#mainContent" class="feat-LinkToFeatureButton" target="_blank">Link to feature</a>
+                <div class="feat-Inspired">
+                    <a href="https://www.youtube.com/watch?v=18Jvyp60Vbg&list=PLovMwyjiI7EAwzIymTKG9a8mlLeBKvMfZ&index=18&t=38s" target="_blank"><ion-icon name="arrow-redo-outline"></ion-icon>Inspired by</a>
+                </div>
+            </div>
+            <div class="feat-ColorDiv feat-featureDiv">
+                <h2>Feature 5</h2>
+                <h3>Theme Color Change</h3>
+                <p>In alignment with our media campaign "Choose Color. Choose Flavor," our website dynamically adapts its color scheme to match the selected favourite ice-cream flavor of our customers</p>
+                <a href="index.html#LinkToThis" class="feat-LinkToFeatureButton" target="_blank">Link to feature</a>
+                <div class="feat-Inspired">
+                    <a href="https://www.youtube.com/watch?v=9LZGB3OLXNQ&t=497s" target="_blank"><ion-icon name="arrow-redo-outline"></ion-icon>Inspired by</a>
+                </div>
+            </div>
+        </div>
+
+    </article>
+    <!--Footer-->
+    <footer>
+        <div class="footer-MainContent">
+            <div class="footer-socialMedia">
+                <a href="https://www.youtube.com/channel/UCKtcNQkXsW1QzeNw3fwgLmg" target="_blank"><ion-icon name="logo-youtube"></ion-icon><p class="visually-hidden">Youtube Link</p></a>
+                <a href="https://www.instagram.com/min_toan/" target="_blank"><ion-icon name="logo-instagram"></ion-icon><p class="visually-hidden">instagram Link</p></a>
+                <a target="_blank" href="https://www.amazon.com/Sweet-Life-Cape-Cod-Creamery/dp/0800739477/ref=sr_1_2?crid=25ZJZOVZY1FBP&dib=eyJ2IjoiMSJ9.wJW7pJaBxsV03Cx3oWImlUnRobHqu0kH--MdCASnbkkWrZpmVwGMZQQ-cu-N0Uh0iuhRpoj3Fbr7hIe0WhCjtX83JypEUUT5rMifHtlTgVsw3A86lsdQWR-NuQZ6gtQrFquV3xtPcCy0UTen2kXKdYeG8froy0kGNoDK6KoE1wKQv16j9fBfIbIN2sBOKYUthgZ0c-Vv0UHm0TEPoEj81XkN4QYbwSiC4njgm5TBOks.wp8v5WZtTqoQoLMk9LR7O4MocvU39wJGuR0G2npQmE0&dib_tag=se&keywords=Sweet+Life&qid=1711550100&sprefix=sweet+lif%2Caps%2C385&sr=8-2"><ion-icon name="logo-amazon"></ion-icon><p class="visually-hidden">Amazon link</p></a>
+                <a target="_blank" href="https://www.reddit.com/r/FrankOcean/comments/17dju8b/sweet_life_is_perhaps_my_favorite_song_of_all_time/"><ion-icon name="logo-reddit"></ion-icon><p class="visually-hidden">reddit link</p></a>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">HOME</a>
+                <a href="registration.html">REGISTRATION</a>
+                <a href="order.html">ORDER</a>
+                <a href="features.html">FEATURE</a>
+            </div>
+        </div>
+        <hr>
+        <p class="footer-Copyright"><em>The website serves as Assignment 2 for the Web Development Unit within Swinburne University's Computer Science program.</em></p>
+    </footer>
+</body>
+</html>
